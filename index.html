@@ -1,66 +1,116 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Stylish Digital Clock</title>
+  <title>EduBlog - Learn Every Day</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Segoe UI', sans-serif;
-    }
+      padding: 0;
+      background: #eef2f3;
+      color: #222;
+    }header {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
 
-    .clock {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 40px 60px;
-      color: #ffffff;
-      font-size: 60px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      text-shadow: 0 0 10px #00ffcc;
-    }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .clock::before {
-      content: "🕒 Digital Watch";
-      display: block;
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #aaffff;
-      text-shadow: none;
-    }
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.post {
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-left: 5px solid #0077cc;
+  border-radius: 5px;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.post .date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
   </style>
 </head>
 <body>
+  <header>
+    <h1>EduBlog</h1>
+    <p>Your Daily Learning Companion</p>
+    <nav>
+      <a href="#">Home</a>
+    </nav>
+  </header>  <main>
+    <section class="post">  
+    <img src="/project/project 1/anoushka-puri-f1YfrZ1o2r8-unsplash.jpg" alt="Math Tips">
+      <h2 id="math">Top 5 Math Study Tips</h2>
+      <p class="date">2 June 2025</p>
+      <p>Math ko asaan banane ke kuch zabardast tips:</p>
+      <ul>
+        <li>Practice rozana</li>
+        <li>Formulas yaad rakhein</li>
+        <li>Examples solve karein</li>
+        <li>Concept pe focus karein</li>
+        <li>Revision karein</li>
+      </ul>
+    </section><section class="post">
+  <img src="/project/project 1/istockphoto-1491010657-1024x1024.jpg" alt="Science Laws">
+  <h2 id="science">Newton’s Laws Simplified</h2>
+  <p class="date">1 June 2025</p>
+  <p>Physics ka dar khatam! Newton ke motion ke 3 qanoon:</p>
+  <ul>
+    <li>Object rest ya motion mein rehta hai jab tak external force na lage.</li>
+    <li>F = ma (Force = mass × acceleration)</li>
+    <li>Har action ka equal aur opposite reaction hota hai.</li>
+  </ul>
+</section>
 
-  <div class="clock" id="clock">00:00:00</div>
+<section class="post">
+  <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df" alt="English Grammar">
+  <h2 id="english">English Grammar Basics</h2>
+  <p class="date">30 May 2025</p>
+  <p>Grammar basics mein shamil hain:</p>
+  <ul>
+    <li>Tenses: Present, Past, Future</li>
+    <li>Parts of Speech</li>
+    <li>Sentence Structure</li>
+  </ul>
+</section>
 
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const hrs = String(now.getHours()).padStart(2, '0');
-      const mins = String(now.getMinutes()).padStart(2, '0');
-      const secs = String(now.getSeconds()).padStart(2, '0');
-      document.getElementById("clock").textContent = `${hrs}:${mins}:${secs}`;
-    }
+<section class="post">
+  <img src="/project/project 1/christin-hume-mfB1B1s4sMc-unsplash.jpg" alt="Computer History">
+  <h2 id="computers">History of Computers</h2>
+  <p class="date">28 May 2025</p>
+  <p>Computer ka safar Charles Babbage se shuru hua, phir ENIAC, personal computers aur ab Artificial Intelligence tak pohnch gaya hai.</p>
+</section>
 
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
-
+  </main>  <footer>
+    <p>&copy; 2025 EduBlog. All rights reserved.</p>
+  </footer>
 </body>
 </html>
-
-
-
-
-
-
-
